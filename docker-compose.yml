@@ -44,7 +44,7 @@ services:
       OLLAMA_KEEP_ALIVE: 24h
 
   memos:
-    image: ghcr.io/c4saas/melvin-memos:${APP_VERSION:-0.1.66}
+    image: ghcr.io/c4saas/melvin-memos:${APP_VERSION:-0.1.67}
     container_name: ${COMPOSE_PROJECT_NAME:-memos}_app
     restart: unless-stopped
     depends_on:
@@ -59,7 +59,7 @@ services:
       PORT: 3100
       DATABASE_URL: postgres://memos:${POSTGRES_PASSWORD}@postgres:5432/memos
       APP_BASE_URL: ${APP_BASE_URL:-http://localhost:3100}
-      APP_VERSION: ${APP_VERSION:-0.1.66}
+      APP_VERSION: ${APP_VERSION:-0.1.67}
       MEMOS_SINGLE_USER: ${MEMOS_SINGLE_USER:-}
       MEMOS_DEFAULT_EMAIL: ${MEMOS_DEFAULT_EMAIL:-admin@example.com}
       MEMOS_DEFAULT_NAME: ${MEMOS_DEFAULT_NAME:-Admin}
